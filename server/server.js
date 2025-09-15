@@ -15,8 +15,8 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? ["https://your-vercel-domain.vercel.app", "https://*.vercel.app"]
-        : ["http://localhost:3000"],
+        ? ["https://frontend-portfolio-taupe-seven.vercel.app/"]
+        : ["http://localhost:5173"],
     credentials: true,
   })
 );
