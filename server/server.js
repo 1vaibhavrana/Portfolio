@@ -15,7 +15,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? ["https://vaibhavrana-portfolio.vercel.app/"]
+        ? ["https://vaibhavrana-portfolio.vercel.app"]
         : ["http://localhost:5173"],
     credentials: true,
   })
