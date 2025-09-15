@@ -37,14 +37,14 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/contact", contactRoutes);
 
 // Serve static files from React build in production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
 
-  app.use((req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-  });
+//   app.use((req, res) => {
+//     res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+//   });
 
-}
+// }
 
 // Connect to MongoDB
 mongoose
