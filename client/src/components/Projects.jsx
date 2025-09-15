@@ -10,7 +10,8 @@ const Projects = () => {
 
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/projects");
+        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+        const res = await axios.get(`${apiUrl}/api/projects`);
         setProjects(res.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
