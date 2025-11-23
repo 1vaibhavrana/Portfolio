@@ -25,7 +25,13 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
-  if (loading) return <></>;
+  if (loading)
+    return (
+      <div className="d-flex justify-content-center py-5">
+        <div className="spinner-border" role="status"></div>
+      </div>
+    );
+
 
   return (
     <>
@@ -51,6 +57,7 @@ const Projects = () => {
                   {project.imageUrl && (
                     <img
                       src={project.imageUrl}
+                      loading="lazy"
                       className="card-img-top"
                       alt={project.title}
                       style={{ height: "180px", objectFit: "cover" }}
